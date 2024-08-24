@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TalentTrail</title>
+    <script src = "JS/index.js" type="text/javascript" defer></script>
+
+    <title>TalentTail</title>
 </head>
 <body>
 
     <!--TODO: Prencher da header-->
     <header>
-        <h1><a href="index.html">TalentTrail</a></h1>
+        <h1><a href="index.html">TalentTail</a></h1>
         <!--TODO: Prencher da nav-->
         <nav class="nav_header">
             <ul>
@@ -55,7 +57,7 @@
                     <div id="dup_phone_number">
                         <input type="tel" id="phone_number" name="phone_number" placeholder="Número de Telefone" required> <br> <br>
                     </div>
-                    <button type="button" onclick="dup_tel">Adicionar Outro</button> <br> <br>
+                    <button type="button" onclick="dup_tel()">Adicionar Outro</button> <br> <br>
                     <input type="email" id="email" name="email" placeholder="E-mail@email.com" required> <br> <br>
                     
                 <!--OBJETIVO-->
@@ -72,7 +74,7 @@
                         <label for="ins_end_date">Data de Conclusão</label>
                         <input type="date" id="ins_end_date" name="ins_end_date" ><br> <br>
                     </div>
-                    <button type="button" onclick="dup_academy" >Adicionar</button>
+                    <button type="button" onclick="dup_academy()" >Adicionar</button><br> <br>
 
                 <!--EXPERIENCIA PROFISSIONAL-->
                 <h3>Experiencia Profissional </h3>
@@ -85,7 +87,7 @@
                         <label for="comp_end_date">Data de Saída</label>
                         <input type="date"  id="comp_end_date" name="comp_end_date"><br><br>
                     </div>
-                    <button type="button" onclick="dup_experience">Adicionar</button>
+                    <button type="button" onclick="dup_experience()">Adicionar</button>
 
                 <!--ATIVIDADES COMPLEMENTARES-->
                 <h3>Atividades Complementares </h3>
@@ -97,7 +99,7 @@
                         <input type="date"  id="atv_end_date" name="atv_end_date"><br><br>
                         <input type="text"  id="skills" name="skills"  placeholder="Habilidades Adquiridas"><br><br>
                     </div>
-                    <button type="button" onclick="dup_activity">Adicionar</button>
+                    <button type="button" onclick="dup_activity()">Adicionar</button>
 
                 <!--IDIOMAS-->
                 <h3>Idioma</h3>
@@ -111,7 +113,7 @@
                             <option value="nvl_fluen_native">Nível Fluente ou nativo</option>
                         </select>
                     </div>
-                    <button type="button" onclick="dup_languages">Adicionar</button>
+                    <button type="button" onclick="dup_languages()">Adicionar</button><br><br>
 
                     <input type="submit" value="Gerar Curriculo"> 
 
