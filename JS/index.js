@@ -31,7 +31,7 @@ function remove_tel(count) {
     }
 }
 
-//DUPLICAR FORMAO ACADEMICA 
+//DUPLICAR FORMACAO ACADEMICA 
 function dup_academy() {
     academy_count++;
     const container_academy = document.getElementById('academy');
@@ -49,6 +49,16 @@ function dup_academy() {
         <button type="button" onclick="remove_academy(${academy_count})">Remover</button> <br> <br>
     `;
     container_academy.appendChild(new_academy);
+}
+
+//REMOVER FORMACAO ACADEMICA
+function remove_academy(count){
+    const container_academy = document.getElementById('academy');
+    const academy_to_remove = document.getElementById(`academy_container_${count}`);
+
+    if(academy_to_remove){
+        container_academy.removeChild(academy_to_remove);
+    }
 }
 
 //DUPLICAR EXPERIENCIA PROFISSIONAL
@@ -72,6 +82,16 @@ function dup_experience() {
     container_experience.appendChild(new_experience);
 }
 
+//REMOVER EXPERIENCIA PROFISSIONAL
+function remove_experience(count){
+    const container_experience = document.getElementById('experience');
+    const experience_to_remove = document.getElementById(`experience_container_${count}`);
+
+    if(experience_to_remove){
+        container_experience.removeChild(experience_to_remove);
+    }
+}
+
 //DUPLICAR ATIVIDADES COMPLEMENTARES
 function dup_activity() {
     activity_count++;
@@ -90,6 +110,16 @@ function dup_activity() {
         <button type="button" onclick="remove_activity(${activity_count})">Remover</button> <br> <br>
     `;
     container_activity.appendChild(new_activity);
+}
+
+//REMOVER ATIVIDADES COMPLEMENTARES
+function remove_activity(count){
+    const container_activity = document.getElementById('activity');
+    const activity_to_remove = document.getElementById(`activity_container_${count}`);
+
+    if(activity_to_remove){
+        container_activity.removeChild(activity_to_remove);
+    }
 }
 
 //DUPLICAR IDIOMAS
@@ -112,4 +142,14 @@ function dup_languages() {
         <button type="button" onclick="remove_languages(${languages_count})">Remover</button> <br> <br>
     `;
     container_languages.appendChild(new_languages);
+}
+
+//REMOVER IDIOMAS
+function remove_languages(count){
+    const container_languages = document.getElementById('languages');
+    const languages_to_remove = document.getElementById(`languages_container_${count}`);
+
+    if(languages_to_remove){
+        container_languages.removeChild(languages_to_remove);
+    }
 }
