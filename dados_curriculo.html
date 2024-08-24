@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TalentTrail</title>
 </head>
 <body>
 
     <!--TODO: Prencher da header-->
     <header>
-        
+        <h1><a href="index.html">TalentTrail</a></h1>
+        <!--TODO: Prencher da nav-->
+        <nav class="nav_header">
+            <ul>
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="dados_curriculo.html">Currículo</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <!--TODO: Prencher da nav-->
-    <nav>
-
-    </nav>
-
+    
     <!--TODO: criar o form-->
     <!--TODO: dados pessoais, objetivos, formação acadêmica, 
     experiência profissional, atividade complementares e idiomas -->
@@ -31,19 +33,56 @@
         languages, fluency
     -->
     <main>
-        <!--DADOS PESSOAIS-->
-        <!--OBJETIVO-->
-        <!--FORMACAO ACADEMICA-->
-        <!--EXPERIENCIA PROFISSIONAL-->
-        <!--ATIVIDADES COMPLEMENTARES-->
-        <!--IDIOMAS-->
+        <article>
+            <form action="PHP/dados.php" method="post">
+                
+                <!--DADOS PESSOAIS-->
+                <h3>Dados Pessoais</h3>
+                    <input type="text" id="full_name" name="full_name" placeholder="Nome Completo" required> <br> <br>
+                    <label for="dt_birth">Data de Nascimento</label>   
+                    <input type="date" id="dt_birth" name="dt_birth" required> <br> <br>
+                    <input type="number" id="age"  name="age" placeholder="Idade" required> <br> <br>
+                    <label for="sexo">sexo</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="meminino">Femenino</option>
+                        <option value="outro">Outro</option>
+                        <option value="prefiro_nao_declarar">Prefiro não declarar</option>  
+                    </select> <br><br>
+                    <input type="text" id="address" name="address" placeholder="Endereço" required> <br> <br>
+                    <input type="text" id="city" name="city" placeholder="Cidade" required> <br> <br>
+                    <input type="text" id="state" name="state" placeholder="Estado" required> <br> <br>
+                    <div id="dup_phone_number">
+                        <input type="tel" id="phone_number" name="phone_number" placeholder="Número de Telefone" required> <br> <br>
+                    </div>
+                    <button type="button" onclick="dup_tel">Adicionar Outro</button> <br> <br>
+                    <input type="email" id="email" name="email" placeholder="E-mail@email.com" required> <br> <br>
+                    
+                <!--OBJETIVO-->
+                <h3>Objetivo</h3>
+                    <input type="text" id="objective" name="objective" placeholder="Objetivo"> <br><br>
+                    
+                <!--FORMACAO ACADEMICA-->
+                <h3>Formação Acadêmica</h3>
+                    <div id="academy">
+                        <input type="text" id="course" name="course" placeholder="Curso"><br> <br>
+                        <input type="text" id="institution" name="institution" placeholder="Instituição"><br> <br>
+                        <label for="ins_start_date">Data de Início</label>
+                        <input type="date" id="ins_start_date" name="ins_start_date" ><br> <br>
+                        <label for="ins_end_date">Data de Conclusão</label>
+                        <input type="date" id="ins_end_date" name="ins_end_date" ><br> <br>
+                    </div>
+                    <button type="button" onclick="dup_academy" >Adicionar</button>
+
+            </form>
+        </article>
     </main>
 
     <!--TODO: Prencher do footer-->
     <footer>
         <!--TODO: Prencher da nav-->
         <nav>
-
+    
         </nav>
     </footer>
 </body>
