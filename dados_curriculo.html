@@ -74,15 +74,61 @@
                     </div>
                     <button type="button" onclick="dup_academy" >Adicionar</button>
 
+                <!--EXPERIENCIA PROFISSIONAL-->
+                <h3>Experiencia Profissional </h3>
+                    <div id="experience">
+                        <input type="text"  id="company_name" name="company_name"  placeholder="Nome da Empresa"> <br><br>
+                        <input type="text"  id="company_locality" name="company_locality" placeholder="Localidade"><br><br>
+                        <input type="text"  id="job_activities" name="job_activities"  placeholder="Atividade desempenhada no cargo"><br><br>
+                        <label for="comp_start_date">Data de Entrada</label>
+                        <input type="date"  id="comp_start_date" name="comp_start_date"><br><br>
+                        <label for="comp_end_date">Data de Saída</label>
+                        <input type="date"  id="comp_end_date" name="comp_end_date"><br><br>
+                    </div>
+                    <button type="button" onclick="dup_experience">Adicionar</button>
+
+                <!--ATIVIDADES COMPLEMENTARES-->
+                <h3>Atividades Complementares </h3>
+                    <div id="activity">
+                        <input type="text"  id=" activity_title" name="activity_title"  placeholder="Titulo da Atividade"><br><br>  
+                        <label for="atv_start_date">Data Inicio</label>
+                        <input type="date"  id="atv_start_date" name="atv_start_date"><br><br>
+                        <label for="atv_end_date">Data Conclusão</label>
+                        <input type="date"  id="atv_end_date" name="atv_end_date"><br><br>
+                        <input type="text"  id="skills" name="skills"  placeholder="Habilidades Adquiridas"><br><br>
+                    </div>
+                    <button type="button" onclick="dup_activity">Adicionar</button>
+
+                <!--IDIOMAS-->
+                <h3>Idioma</h3>
+                    <div id="languages">
+                        <label for="languages" placeholder="idiomas"> <input type="text" id="languages" name="languages" placeholder="Idioma"></label><br><br>
+                        <select id="fluency" name="fluency">
+                            <option value="nvl_basic">Nível básico</option>
+                            <option value="nvl_basic_inter">Nível básico a intermediário</option>
+                            <option value="nvl_inter">Nível intermediário</option>
+                            <option value="nvl_advanced">Nível avançado</option>
+                            <option value="nvl_fluen_native">Nível Fluente ou nativo</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="dup_languages">Adicionar</button>
+
+                    <input type="submit" value="Gerar Curriculo"> 
+
             </form>
         </article>
     </main>
 
     <!--TODO: Prencher do footer-->
     <footer>
+        <p>©2024 TalentTail</p>
         <!--TODO: Prencher da nav-->
-        <nav>
-    
+        <nav class="nav_footer">
+            <ul>
+                <li><img src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/welllington-henrique-silva-lima/">Wellington Henrique</a></li>
+                <li><img src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/glauber-shoity-nakai-529549273/">Glauber Shoity</a></li>
+                <li><img src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/kamilla-barros-silva-85537819a/">Kamilla Silva</a></li>
+            </ul>
         </nav>
     </footer>
 </body>
