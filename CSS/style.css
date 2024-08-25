@@ -1,1 +1,5 @@
 /*TODO: Adicionar estilo de acordo com o Figma*/
+.span_required{
+    color: red;
+    display: none;
+}
