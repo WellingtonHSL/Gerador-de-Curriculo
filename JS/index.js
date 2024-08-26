@@ -176,6 +176,7 @@ function removeError(dados_curriculo){
    
 }
 
+//VALIDAÇAO NOME
 function nameValidate(){
     if(campos[0].value.length <= 2){
         setError(0);
@@ -185,6 +186,7 @@ function nameValidate(){
     }
 }
 
+//VALIDAÇAO DATA DE NASCIMENTO
 function dt_birthValidate(){
     if(campos[1].value.length <= 2){
         setError(1);
@@ -193,6 +195,8 @@ function dt_birthValidate(){
         removeError(1);
     }
 }
+
+//VALIDAÇAO DE IDADE
 function ageValidate(){
     if(campos[2].value.length <= 1){
         setError(2);
@@ -201,6 +205,8 @@ function ageValidate(){
         removeError(2);
     }
 }
+
+//VALIDAÇAO DO ENDEREÇO
 function addressValidate(){
     if(campos[4].value.length <= 2){
         setError(4);
@@ -209,6 +215,8 @@ function addressValidate(){
         removeError(4);
     }
 }
+
+//VALIDAÇAO DA CIDADE
 function cityValidate(){
     if(campos[5].value.length <= 2){
         setError(5);
@@ -217,6 +225,8 @@ function cityValidate(){
         removeError(5);
     }
 }
+
+//VALIDAÇAO DO ESTADO
 function stateValidate(){
     if(campos[6].value.length <= 3){
         setError(6);
@@ -226,6 +236,7 @@ function stateValidate(){
     }
 }
 
+//VALIDAÇAO DO NUMERO DE TELEFONE
 function phone_numberValidate(){
     if(campos[7].value.length <= 13){
         setError(7);
@@ -234,6 +245,8 @@ function phone_numberValidate(){
         removeError(7);
     }
 }
+
+//VALIDAÇAO DO EMAIL
 function emailValidate(){
     if(campos[8].value.length <= 10){
         setError(8);
@@ -244,6 +257,8 @@ function emailValidate(){
     }
 }
 
+//MASCARA DO TELEFONE
+//BUG: com a atualização das id para array e parou de funcionar
 phone_mask.addEventListener('keypress', () =>{
     let phone_masklength = phone_mask.value.length
 
@@ -255,5 +270,3 @@ phone_mask.addEventListener('keypress', () =>{
         phone_mask.value += '-';
     }
 })
-
-
