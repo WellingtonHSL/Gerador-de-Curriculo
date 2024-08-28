@@ -6,7 +6,7 @@
     $dt_birth = $_POST['dt_birth'];
     $age = $_POST['age'];
     $sexo = $_POST['sexo'];
-    $adress = $_POST['adress'];
+    $address = $_POST['address'];
     $city = $_POST['city'];
     $state = $_POST['state'];
     $phone_number = $_POST['phone_number'];
@@ -73,4 +73,46 @@
             $fluency[$i] = htmlspecialchars($fluency[$i]);
         }
     }
+
+    session_start();
+
+    //DADOS PESSOAIS
+    $_SESSION['full_name'] = $full_name;
+    $_SESSION['dt_birth'] = $dt_birth;
+    $_SESSION['age'] = $age;
+    $_SESSION['sexo'] = $sexo;
+    $_SESSION['address'] = $address;
+    $_SESSION['city'] = $city;
+    $_SESSION['state'] = $state;
+    $_SESSION['phone_number'] = $phone_number;
+    $_SESSION['email'] = $email;
+
+    //OBJETIVOS
+    $_SESSION['objective'] = $objective;
+
+    //FORMAÇÃO ACADEMICA
+    $_SESSION['course'] = $course;
+    $_SESSION['institution'] = $institution;
+    $_SESSION['ins_start_date'] = $ins_start_date;
+    $_SESSION['ins_end_date'] = $ins_end_date;
+
+    //EXPERIENCIA PROFISSIONAL
+    $_SESSION['company_name'] = $company_name;
+    $_SESSION['company_locality'] = $company_locality;
+    $_SESSION['job_activities'] = $job_activities;
+    $_SESSION['comp_start_date'] = $comp_start_date;
+    $_SESSION['comp_end_date'] = $comp_end_date;
+
+    //ATIVIDADES COMPLEMENTARES
+    $_SESSION['activity_title'] = $activity_title;
+    $_SESSION['atv_start_date'] = $atv_start_date;
+    $_SESSION['atv_end_date'] = $atv_end_date;
+    $_SESSION['skills'] = $skills;
+
+    //IDIOMAS
+    $_SESSION['languages'] = $languages;
+    $_SESSION['fluency'] = $fluency;
+
+    header('Location: curriculo.php');
+    exit;
 ?>
