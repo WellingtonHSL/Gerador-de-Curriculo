@@ -61,19 +61,20 @@
                         <input type="text" id="state" name="state" placeholder="Estado" class="required" oninput="stateValidate()"><br>
                         <span class="span_required">Estado é obrigatório!</span><br> 
                         <div id="dup_phone_number">
-                            <input type="text" id="phone_number_0" name="phone_number[]" placeholder="Número de Telefone"class="required" oninput="phone_numberValidate()"><br> 
+                            <input type="tel" id="phone_number_0" name="phone_number[]" placeholder="Número de Telefone"class="required" oninput="phone_numberValidate()"><br> 
                             <span class="span_required">Telefone é obrigatório!</span> <br>
                         </div>
                         <button type="button" onclick="dup_tel()">Adicionar Outro</button> <br> <br>
                         <input type="email" id="email" name="email" placeholder="E-mail@email.com" class="required" oninput="emailValidate()"><br> 
                         <span class="span_required">E-mail é obrigatório!</span> <br>
                     </fieldset>
-                <!--OBJETIVO-->
 
+                <!--OBJETIVO-->
                 <h3>Objetivo</h3>
                     <fieldset class="field_objective">
                         <input type="text" id="objective" name="objective" placeholder="Objetivo"> <br><br>
                     </fieldset>
+
                 <!--FORMACAO ACADEMICA-->
                 <h3>Formação Acadêmica</h3>
                     <fieldset class="field_academy">
@@ -87,6 +88,7 @@
                         </div>
                         <button type="button" onclick="dup_academy()" >Adicionar</button><br> <br>
                     </fieldset>
+
                 <!--EXPERIENCIA PROFISSIONAL-->
                 <h3>Experiencia Profissional </h3>
                     <fieldset>
@@ -101,24 +103,26 @@
                         </div>
                         <button type="button" onclick="dup_experience()">Adicionar</button>
                     </fieldset>
+
                 <!--ATIVIDADES COMPLEMENTARES-->
                 <h3>Atividades Complementares </h3>
                     <fieldset class="field_activity">
                         <div id="activity">
-                            <input type="text"  id="activity_title" name="activity_title[]"  placeholder="Titulo da Atividade"><br><br>  
+                            <input type="text"  id="activity_title_0" name="activity_title[]"  placeholder="Titulo da Atividade"><br><br>  
                             <label for="atv_start_date_0">Data Inicio</label>
-                            <input type="date"  id="atv_start_date" name="atv_start_date[]"><br><br>
+                            <input type="date"  id="atv_start_date_0" name="atv_start_date[]"><br><br>
                             <label for="atv_end_date_0">Data Conclusão</label>
                             <input type="date"  id="atv_end_date_0" name="atv_end_date[]"><br><br>
                             <input type="text"  id="skills_0" name="skills[]"  placeholder="Habilidades Adquiridas"><br><br>
                         </div>
                         <button type="button" onclick="dup_activity()">Adicionar</button>
                     </fieldset>
+                    
                 <!--IDIOMAS-->
                 <h3>Idioma</h3>
                     <fieldset class="field_languages">
                     <div id="languages">
-                        <label for="languages_0" placeholder="idiomas"> <input type="text" id="languages" name="languages" placeholder="Idioma"></label><br><br>
+                        <label for="languages_0" placeholder="idiomas"> <input type="text" id="languages_0" name="languages[]" placeholder="Idioma"></label><br><br>
                         <select id="fluency_0" name="fluency[]">
                             <option value="Básico">Nível Básico</option>
                             <option value="Básico a Intermediário">Nível Básico a Intermediário</option>
