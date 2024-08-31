@@ -39,7 +39,7 @@
     $company_locality = $_POST['company_locality'] ?? '';
     $job_activities = $_POST['job_activities'] ?? '';
     $comp_start_date = $_POST['comp_start_date'] ?? '';
-    $comp_end_date = $_POST['$comp_end_date'] ?? '';
+    $comp_end_date = $_POST['comp_end_date'] ?? '';
     if(is_array($company_name)) {
         for($i = 0; $i < count($company_name); $i++) {
             $company_name[$i] = htmlspecialchars($company_name[$i]);
