@@ -157,7 +157,7 @@ function remove_languages(count) {
 const form_section  = document.getElementById('form_section')
 const campos = document.querySelectorAll('.required')
 const spans  = document.querySelectorAll('.span_required')
-const phone_mask = document.querySelector(  '#phone_number')
+const phone_mask = document.querySelectorAll('.phone_number_0')
 
 function setError(dados_curriculo){
     campos[dados_curriculo].style.border = '2px solid red';
@@ -196,7 +196,7 @@ function dt_birthValidate(){
 }
 
 //VALIDAÇAO DE IDADE
-function ageValidate(){
+function sexValidate(){
     if(campos[2].value.length <= 1){
         setError(2);
     }
@@ -207,6 +207,16 @@ function ageValidate(){
 
 //VALIDAÇAO DO ENDEREÇO
 function addressValidate(){
+    if(campos[3].value.length <= 2){
+        setError(3);
+    }
+    else{
+        removeError(3);
+    }
+}
+
+//VALIDAÇAO DA CIDADE
+function cityValidate(){
     if(campos[4].value.length <= 2){
         setError(4);
     }
@@ -215,20 +225,10 @@ function addressValidate(){
     }
 }
 
-//VALIDAÇAO DA CIDADE
-function cityValidate(){
-    if(campos[5].value.length <= 2){
-        setError(5);
-    }
-    else{
-        removeError(5);
-    }
-}
-
 //VALIDAÇAO DO ESTADO
 function stateValidate(){
-    if(campos[6].value.length <= 3){
-        setError(6);
+    if(campos[5].value.length <= 3){
+        setError(5);
     }
     else{
         removeError(6);
@@ -258,9 +258,10 @@ function emailValidate(){
 
 //MASCARA DO TELEFONE
 //BUG: com a atualização das id para array e parou de funcionar
-phone_mask.addEventListener('keypress', () =>{
+function phone_mask_(){
+phone_mask.addEventListener('keypress', phone_mask_ =>{
     let phone_masklength = phone_mask.value.length
-
+    console.log("ENTROUU");
     if(phone_masklength === 0 ){
         phone_mask.value += '(';
     } else if(phone_masklength === 3){
@@ -268,6 +269,9 @@ phone_mask.addEventListener('keypress', () =>{
     }else if(phone_masklength === 9){
         phone_mask.value += '-';
     }
+
+})}
+
 })
 
 function calculateAge() {
