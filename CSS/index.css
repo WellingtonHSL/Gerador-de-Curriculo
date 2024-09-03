@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav_header{
+    position: fixed;
+    justify-items: center;
+    align-items: flex-end;
+    display: flex;
+    background-color: #130F40;
+    width: 100% !important;
+    height: 87px;
+    gap: 0px;
+    opacity: 0px;
+    padding-top: 25px;
+}
+.nav_header_a{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color:  #FFFFFF; 
+    text-decoration: none;
+    padding: 0px;
+    padding-right: 0px;
+    margin-right: 700px;
+    margin-top: 18px;
+    width: 340px;
+    height: 50px;
+    list-style: none !important;
+    display: flex;
+}
+
+.nav_header_a li {
+    align-items: center !important;
+    margin-left: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 150;
+}
+
+.nav_header_a a{
+    font-size: 25px;
+    font-weight: 150;
+    font-style: normal;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 29px; 
+    padding: 0px;
+}
+.bag_icon{
+    justify-items: center;
+    margin: 25px;
+    margin-top: 0;
+    width: 36.92px;
+    height: 30.23px;
+    top: 28.22px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#EAE0C0;
+    justify-content: space-between;
+}
+article{
+    justify-content: space-around;
+    display: flex;
+    box-sizing: border-box;
+}
+article img{
+    display: block;
+    width: 720px;
+    height: 448px;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 0px;
+    margin-top: 100px;
+
+}
+section{
+
+    background-color: #FFFFFF;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 500px;
+    height: 495px;
+    top: 155px;
+    left: 852px;
+    gap: 0px;
+    opacity: 0px;
+    line-height: 200%;
+    border-radius: 20px 20px 20px 20px;
+}
+section p{
+    text-align: left;
+    font-size: 19px;
+    margin: 5px;
+    padding: 5px;
+    
+}
+
+section b{
+    margin-left: 5px;
+    color: #130F40;
+    font-size: 24px;
+
+}
+.section_button {
+    margin-left: 120px;
+    width: 264px;
+    height: 144px;
+    top: 619px;
+    left: 952px;
+    gap: 0px;
+    border-radius: 20px 20px 20px 20px;
+    opacity: 0px;
+    text-align: center;
+    justify-content: center;
+    background-color: #DD4C0E;
+}
+.section_button a{
+    color:#FFFFFF;
+    text-decoration: none !important;
+}
+.section_button b{
+    color: #FFFFFF;
+}
+
+.nav_footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-items: center;
+    align-items: flex-end;
+    display: flex;
+    background-color: #130F40;
+    height: 130px;
+    gap: 0px;
+    opacity: 0px;
+    padding-right: 150px;
+    padding-top: 25px;
+}
+.nav_footer p{
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: justify;
+    color: #FFFFFF;
+    padding: 65px;
+    margin: 0px;
+    margin-left: 90px;
+    padding-top: 20px; 
+    padding-left: 5px;
+}
+
+
+
+.nav_footer ul{
+     display: flex;
+     justify-content: flex-end;
+     white-space: nowrap;
+     align-items: center;
+     list-style: none;  
+     margin-left: 550px;
+
+}
+.nav_footer_div{
+    width: 5px;
+}
+.nav_footer_div p{
+    font-size: 25px;
+    color: #ffffff;
+    flex-direction: column !important;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 5px;
+    Height: 75px;
+    margin-left: 45px;
+}
+
+
+.nav_footer li{
+    color: #FFFFFF;
+    padding: 10px;
+    padding-left: 40px;
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+.nav_footer a{
+    margin-right: 0px;
+    margin-left: 10px !important;
+    padding-bottom: 0px !important;
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none !important;
+    width: 89px;
+    height: 20px;
+    gap: 0px;
+    opacity: 0px;
+    color: #FFFFFF;
+}
+
+.linkedin_icon{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    top: 961px;
+    left: 1071px;
+    gap: 0px;
+    opacity: 0px;   
+}
