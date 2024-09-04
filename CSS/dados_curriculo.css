@@ -1,5 +1,389 @@
 /*TODO: Adicionar estilo de acordo com o Figma*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    height: 87px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.title_icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 100px; 
+}
+
+header h1 {
+    font-size: 40px;
+    line-height: 1; 
+    margin: 0; 
+}
+
+header h1 a {
+    color: #130F40;
+    text-decoration: none;
+}
+
+.bag_icon {
+    height: 38px;
+    margin: 0;
+}
+
+.nav_header {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.nav_header_a {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_header_a li {
+    margin: 0;
+}
+
+.nav_header_a a {
+    font-size: 24px;
+    color: #130F40; 
+    text-decoration: none; 
+    padding: 10px 15px;
+}
+
+.nav_header_a a:hover {
+    color: #DD4C0E;
+}
+
+/*BODY*/
+body {
+    background-color: #ffffff;
+    color: #777777;
+    line-height: 1.6;
+    padding: 107px 0px 0px 0px;
+}
+
+main {
+    background: #ffffff;
+}
+
+h3 {
+    font-size: 36px;
+    color: #130F40;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.fieldset_container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+.field_objective input {
+    min-height: 60px;
+    max-height: 500px;
+}
+
+.field_data, .field_objective, .field_academy, .field_experience, .field_activity, .field_languages {
+    margin-bottom: 40px;
+}
+
+.fieldset_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fieldset_container h3 {
+    width: 100%;
+    max-width: 900px;
+    margin-left: 0;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px; 
+}
+
+.info label {
+    margin-right: 5px;
+}
+
+.info input, .info select {
+    flex: 1;
+    max-width: 260px;
+}
+
+.info_cep {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.info_cep input {
+    flex: 1;
+}
+
+.info_cep #city {
+    flex: 2;
+}
+
+.info_cep #state {
+    flex: 1;
+}
+
+.dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+.dates label {
+    margin-right: 10px;
+    white-space: nowrap; 
+}
+  
+.dates input {
+    flex: 1; 
+}
+
+#languages {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os conjuntos */
+}
+
+.language_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.language_item input[type="text"] {
+    flex: 2; /* Input maior */
+    min-width: 200px;
+}
+
+.language_item select {
+    flex: 1;
+    min-width: 150px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+._button_container {
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+}
+
+button {
+    width: 170px;
+    height: 37.6px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 0.7px solid #E52F2Fa6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add {
+    color: #777777;
+    border: 0.7px solid #777777a6;
+}
+
+#add:hover {
+    background-color: #7faf6ca6;
+}
+
+
+#remove {
+    color: #E52F2F;
+    border: 0.7px solid #E52F2Fa6;
+    border-radius: 4px;
+}
+
+#remove:hover {
+    background-color: #E52F2Fa6;
+}
+
+input[type="submit"] {
+    width: 341px;
+    height: 70px;
+    background-color: #DD4C0E;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    background-color: #c0420c;
+}
+
 .span_required{
-    color: red;
+    color: #E52F2F;
     display: none;
+}
+
+/*FOOTER*/
+.nav_footer{
+    position: relative;
+    top: 30px;
+    width: 100%;
+    justify-items: center;
+    align-items: flex-end;
+    display: flex;
+    background-color: #130F40;
+    height: 130px;
+    gap: 0px;
+    opacity: 0px;
+    padding-right: 150px;
+    padding-top: 25px;
+}
+.nav_footer p{
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: justify;
+    color: #FFFFFF;
+    padding: 65px;
+    margin: 0px;
+    margin-left: 90px;
+    padding-top: 20px; 
+    padding-left: 5px;
+}
+
+
+
+.nav_footer ul{
+     display: flex;
+     justify-content: flex-end;
+     white-space: nowrap;
+     align-items: center;
+     list-style: none;  
+     margin-left: 550px;
+
+}
+.nav_footer_div{
+    width: 5px;
+}
+.nav_footer_div p{
+    font-size: 25px;
+    color: #ffffff;
+    flex-direction: column !important;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 5px;
+    Height: 75px;
+    margin-left: 45px;
+}
+
+
+.nav_footer li{
+    color: #FFFFFF;
+    padding: 10px;
+    padding-left: 40px;
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+.nav_footer a{
+    margin-right: 0px;
+    margin-left: 10px !important;
+    padding-bottom: 0px !important;
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none !important;
+    width: 89px;
+    height: 20px;
+    gap: 0px;
+    opacity: 0px;
+    color: #FFFFFF;
+}
+
+.linkedin_icon{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    top: 961px;
+    left: 1071px;
+    gap: 0px;
+    opacity: 0px;   
 }

@@ -15,8 +15,9 @@ function dup_tel() {
     new_phone.className = 'section_phone';
     new_phone.id = `phone_container_${phone_count}`;
     new_phone.innerHTML = `
-        <input type="tel" id="phone_number_${phone_count}" name="phone_number" placeholder="Número de Telefone" class="required" oninput="phone_numberValidate()"><br> <br>
-        <button type="button" onclick="remove_tel(${phone_count})">Remover</button> <br> <br>
+        <input type="tel" id="phone_number_${phone_count}" name="phone_number[]" placeholder="Número de Telefone" class="required" oninput="phone_numberValidate()"><br> <br>
+        <span class="span_required">Telefone é obrigatório!</span> <br>
+        <button type="button" id="remove" onclick="remove_tel(${phone_count})">Remover</button> <br> <br>
     `;
     container_phone.appendChild(new_phone);
 }
@@ -41,11 +42,13 @@ function dup_academy() {
     new_academy.innerHTML = `
         <input type="text" id="course_${academy_count}" name="course[]" placeholder="Curso"><br><br>
         <input type="text" id="institution_${academy_count}" name="institution[]" placeholder="Instituição"><br><br>
-        <label for="ins_start_date_${academy_count}">Data de Início</label>
-        <input type="date" id="ins_start_date_${academy_count}" name="ins_start_date[]"><br><br>
-        <label for="ins_end_date_${academy_count}">Data de Conclusão</label>
-        <input type="date" id="ins_end_date_${academy_count}" name="ins_end_date[]"><br><br>
-        <button type="button" onclick="remove_academy(${academy_count})">Remover</button><br><br>
+        <div class="dates">
+            <label for="ins_start_date_${academy_count}">Data de Início</label>
+            <input type="date" id="ins_start_date_${academy_count}" name="ins_start_date[]"><br><br>
+            <label for="ins_end_date_${academy_count}">Data de Conclusão</label>
+            <input type="date" id="ins_end_date_${academy_count}" name="ins_end_date[]"><br><br>
+        </div>
+        <button type="button" id="remove" onclick="remove_academy(${academy_count})">Remover</button><br><br>
     `;
     container_academy.appendChild(new_academy);
 }
@@ -72,11 +75,13 @@ function dup_experience() {
         <input type="text" id="company_name_${experience_count}" name="company_name[]" placeholder="Nome da Empresa"><br><br>
         <input type="text" id="company_locality_${experience_count}" name="company_locality[]" placeholder="Localidade"><br><br>
         <input type="text" id="job_activities_${experience_count}" name="job_activities[]" placeholder="Atividade desempenhada no cargo"><br><br>
-        <label for="comp_start_date_${experience_count}">Data de Entrada</label>
-        <input type="date" id="comp_start_date_${experience_count}" name="comp_start_date[]"><br><br>
-        <label for="comp_end_date_${experience_count}">Data de Saída</label>
-        <input type="date" id="comp_end_date_${experience_count}" name="comp_end_date[]"><br><br>
-        <button type="button" onclick="remove_experience(${experience_count})">Remover</button><br><br>
+        <div class="dates">
+            <label for="comp_start_date_${experience_count}">Data de Entrada</label>
+            <input type="date" id="comp_start_date_${experience_count}" name="comp_start_date[]"><br><br>
+            <label for="comp_end_date_${experience_count}">Data de Saída</label>
+            <input type="date" id="comp_end_date_${experience_count}" name="comp_end_date[]"><br><br>
+        </div>
+        <button type="button" id="remove" onclick="remove_experience(${experience_count})">Remover</button><br><br>
     `;
     container_experience.appendChild(new_experience);
 }
@@ -101,12 +106,14 @@ function dup_activity() {
     new_activity.className = 'section_activity';
     new_activity.innerHTML = `
         <input type="text" id="activity_title_${activity_count}" name="activity_title[]" placeholder="Título da Atividade"><br><br>
-        <label for="atv_start_date_${activity_count}">Data Início</label>
-        <input type="date" id="atv_start_date_${activity_count}" name="atv_start_date[]"><br><br>
-        <label for="atv_end_date_${activity_count}">Data Conclusão</label>
-        <input type="date" id="atv_end_date_${activity_count}" name="atv_end_date[]"><br><br>
+        <div class="dates">
+            <label for="atv_start_date_${activity_count}">Data Início</label>
+            <input type="date" id="atv_start_date_${activity_count}" name="atv_start_date[]"><br><br>
+            <label for="atv_end_date_${activity_count}">Data Conclusão</label>
+            <input type="date" id="atv_end_date_${activity_count}" name="atv_end_date[]"><br><br>
+        </div>
         <input type="text" id="skills_${activity_count}" name="skills[]" placeholder="Habilidades Adquiridas"><br><br>
-        <button type="button" onclick="remove_activity(${activity_count})">Remover</button><br><br>
+        <button type="button" id="remove" onclick="remove_activity(${activity_count})">Remover</button><br><br>
     `;
     container_activity.appendChild(new_activity);
 }
@@ -130,15 +137,19 @@ function dup_languages() {
     new_languages.id = `languages_container${languages_count}`;
     new_languages.className = 'section_languages';
     new_languages.innerHTML = `
-        <input type="text" id="languages_${languages_count}" name="languages[]" placeholder="Idioma"><br><br>
-        <select id="fluency_${languages_count}" name="fluency[]">
-            <option value="Básico">Nível Básico</option>
-            <option value="Básico a Intermediário">Nível Básico a Intermediário</option>
-            <option value="Intermediário">Nível Intermediário</option>
-            <option value="Avançado">Nível Avançado</option>
-            <option value="Fluente ou Nativo">Nível Fluente ou Nativo</option>
-        </select><br><br>
-        <button type="button" onclick="remove_languages(${languages_count})">Remover</button><br><br>
+        <div id="languages">
+            <div class="language_item">
+                <input type="text" id="languages_${languages_count}" name="languages[]" placeholder="Idioma"><br><br>
+                <select id="fluency_${languages_count}" name="fluency[]">
+                    <option value="Básico">Nível Básico</option>
+                    <option value="Básico a Intermediário">Nível Básico a Intermediário</option>
+                    <option value="Intermediário">Nível Intermediário</option>
+                    <option value="Avançado">Nível Avançado</option>
+                    <option value="Fluente ou Nativo">Nível Fluente ou Nativo</option>
+                </select><br><br>
+            </div>
+        </div>
+        <button type="button" id="remove" onclick="remove_languages(${languages_count})">Remover</button><br><br>
     `;
     container_languages.appendChild(new_languages);
 }
