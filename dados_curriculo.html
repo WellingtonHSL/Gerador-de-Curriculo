@@ -11,10 +11,13 @@
 
     <!--TODO: Prencher da header-->
     <header>
-        <h1><a href="index.html">TalentTail</a></h1>
+        <div class="title_icon">
+            <img src="IMG/bag_icon_blue.png" alt="maleta azul" class="bag_icon">
+            <h1><a href="index.html">TalentTail</a></h1>
+        </div>    
         <!--TODO: Prencher da nav-->
         <nav class="nav_header">
-            <ul>
+            <ul class="nav_header_a">
                 <li ><a href="index.html">Home</a></li>
                 <li><a href="dados_curriculo.html">Currículo</a></li>
             </ul>
@@ -37,105 +40,128 @@
     <main>
         <article>
             <form action="PHP/dados.php" method="post" id="form_section">
-                
+            <div class="fieldset_container">    
                 <!--DADOS PESSOAIS-->
-                <h3>Dados Pessoais</h3>
-                    <fieldset class="field_data">
+                <fieldset class="field_data">
+                    <h3>Dados Pessoais</h3>
                         <input type="text" id="full_name" name="full_name" placeholder="Nome Completo" class="required" oninput="nameValidate()"><br>
-                        <span class="span_required">Nome Completo é obrigatório!</span> <br>          
-                        <label for="dt_birth">Data de Nascimento</label>   
-                        <input type="date" id="dt_birth" name="dt_birth" class="required" oninput="dt_birthValidate()" onchange="calculateAge()"> <br>
-                        <span class="span_required">Data de Nascimento é obrigatório!</span><br>
-                        <label for="age">Idade</label>
-                        <input type="text" id="age" name="age" readonly> <br> <br>
-                        <label for="sexo">sexo</label>
-                        <select id="sexo" name="sexo" class="required">
-                            <option value="Masculino">Masculino</option>
-                            <option value="Feminino">Feminino</option>
-                            <option value="Outro">Outro</option>
-                            <option value="Prefiro não Declarar">Prefiro não declarar</option>  
-                        </select><br>
-                        <span class="span_required"></span><br>
+                        <span class="span_required">Nome Completo é obrigatório!</span> <br>    
+                        <div class="info">     
+                            <label for="dt_birth">Data de Nascimento</label>   
+                            <input type="date" id="dt_birth" name="dt_birth" class="required" oninput="dt_birthValidate()" onchange="calculateAge()"> <br>
+                            <span class="span_required">Data de Nascimento é obrigatório!</span><br>
+                            <label for="age">Idade</label>
+                            <input type="text" id="age" name="age" readonly> <br> <br>
+                            <label for="sexo">sexo</label>
+                            <select id="sexo" name="sexo" class="required">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Outro">Outro</option>
+                                <option value="Prefiro não Declarar">Prefiro não declarar</option>  
+                            </select><br> 
+                            <span class="span_required"></span><br>
+                        </div>
                         <input type="text" id="address" name="address" placeholder="Endereço"class="required" oninput="addressValidate()"><br>
                         <span class="span_required" >Endereço é obrigatório!</span><br>
-                        <input type="text" id="city" name="city" placeholder="Cidade"class="required" oninput="cityValidate()"><br> 
-                        <span class="span_required">Cidade é obrigatório!</span><br>
-                        <input type="text" id="state" name="state" placeholder="Estado" class="required" oninput="stateValidate()"><br>
-                        <span class="span_required">Estado é obrigatório!</span><br> 
+                        <div class="info_cep">
+                            <input type="text" id="city" name="city" placeholder="Cidade"class="required" oninput="cityValidate()"><br> 
+                            <span class="span_required">Cidade é obrigatório!</span><br>
+                            <input type="text" id="state" name="state" placeholder="Estado" class="required" oninput="stateValidate()"><br>
+                            <span class="span_required">Estado é obrigatório!</span><br>
+                        </div> 
                         <div id="dup_phone_number">
                             <input type="tel" id="phone_number_0" name="phone_number[]" placeholder="Número de Telefone"class="required" oninput="phone_numberValidate()"><br> 
                             <span class="span_required">Telefone é obrigatório!</span> <br>
                         </div>
-                        <button type="button" onclick="dup_tel()">Adicionar Outro</button> <br> <br>
+                        <button type="button" id="add" onclick="dup_tel()">Adicionar Outro</button> <br> <br>
                         <input type="email" id="email" name="email" placeholder="E-mail@email.com" class="required" oninput="emailValidate()"><br> 
                         <span class="span_required">E-mail é obrigatório!</span> <br>
-                    </fieldset>
+                </fieldset>
 
                 <!--OBJETIVO-->
-                <h3>Objetivo</h3>
-                    <fieldset class="field_objective">
+                <fieldset class="field_objective">
+                    <h3>Objetivo</h3>
                         <input type="text" id="objective" name="objective" placeholder="Objetivo"> <br><br>
-                    </fieldset>
+                </fieldset>
 
                 <!--FORMACAO ACADEMICA-->
-                <h3>Formação Acadêmica</h3>
-                    <fieldset class="field_academy">
+                <fieldset class="field_academy">
+                    <h3>Formação Acadêmica</h3>
+                    
                         <div id="academy">
                             <input type="text" id="course_0" name="course[]" placeholder="Curso"><br> <br>
                             <input type="text" id="institution_0" name="institution[]" placeholder="Instituição"><br> <br>
-                            <label for="ins_start_date_0">Data de Início</label>
-                            <input type="date" id="ins_start_date_0" name="ins_start_date[]" ><br> <br>
-                            <label for="ins_end_date_0">Data de Conclusão</label>
-                            <input type="date" id="ins_end_date_0" name="ins_end_date[]" ><br> <br>
+                            <div class="dates">
+                                <label for="ins_start_date_0">Data de Início</label>
+                                <input type="date" id="ins_start_date_0" name="ins_start_date[]" ><br> <br>
+                                <label for="ins_end_date_0">Data de Conclusão</label>
+                                <input type="date" id="ins_end_date_0" name="ins_end_date[]" ><br> <br>
+                            </div>
                         </div>
-                        <button type="button" onclick="dup_academy()" >Adicionar</button><br> <br>
-                    </fieldset>
+                        <div class="_button_container">
+                            <button type="button" id="add" onclick="dup_academy()" >Adicionar</button><br> <br>
+                        </div>
+                </fieldset>
 
                 <!--EXPERIENCIA PROFISSIONAL-->
-                <h3>Experiencia Profissional </h3>
-                    <fieldset>
+                <fieldset class="field_experience">
+                    <h3>Experiencia Profissional </h3>
                         <div id="experience">
                             <input type="text"  id="company_name_0" name="company_name[]"  placeholder="Nome da Empresa"> <br><br>
                             <input type="text"  id="company_locality_0" name="company_locality[]" placeholder="Localidade"><br><br>
                             <input type="text"  id="job_activities_0" name="job_activities[]"  placeholder="Atividade desempenhada no cargo"><br><br>
-                            <label for="comp_start_date_0">Data de Entrada</label>
-                            <input type="date"  id="comp_start_date_0" name="comp_start_date[]"><br><br>
-                            <label for="comp_end_date_0">Data de Saída</label>
-                            <input type="date"  id="comp_end_date_0" name="comp_end_date[]"><br><br>
+                            <div class="dates">
+                                <label for="comp_start_date_0">Data de Entrada</label>
+                                <input type="date"  id="comp_start_date_0" name="comp_start_date[]"><br><br>
+                                <label for="comp_end_date_0">Data de Saída</label>
+                                <input type="date"  id="comp_end_date_0" name="comp_end_date[]"><br><br>
+                            </div>
                         </div>
-                        <button type="button" onclick="dup_experience()">Adicionar</button>
-                    </fieldset>
+                        <div class="_button_container">
+                            <button type="button" id="add" onclick="dup_experience()">Adicionar</button>
+                        </div>
+                </fieldset>
 
                 <!--ATIVIDADES COMPLEMENTARES-->
-                <h3>Atividades Complementares </h3>
-                    <fieldset class="field_activity">
+                <fieldset class="field_activity">
+                    <h3>Atividades Complementares </h3>
                         <div id="activity">
-                            <input type="text"  id="activity_title_0" name="activity_title[]"  placeholder="Titulo da Atividade"><br><br>  
-                            <label for="atv_start_date_0">Data Inicio</label>
-                            <input type="date"  id="atv_start_date_0" name="atv_start_date[]"><br><br>
-                            <label for="atv_end_date_0">Data Conclusão</label>
-                            <input type="date"  id="atv_end_date_0" name="atv_end_date[]"><br><br>
+                            <input type="text"  id="activity_title_0" name="activity_title[]"  placeholder="Titulo da Atividade"><br><br>
+                            <div class="dates">  
+                                <label for="atv_start_date_0">Data Inicio</label>
+                                <input type="date"  id="atv_start_date_0" name="atv_start_date[]"><br><br>
+                                <label for="atv_end_date_0">Data Conclusão</label>
+                                <input type="date"  id="atv_end_date_0" name="atv_end_date[]"><br><br>
+                            </div>
                             <input type="text"  id="skills_0" name="skills[]"  placeholder="Habilidades Adquiridas"><br><br>
                         </div>
-                        <button type="button" onclick="dup_activity()">Adicionar</button>
-                    </fieldset>
+                        <div class="_button_container">
+                            <button type="button" id="add" onclick="dup_activity()">Adicionar</button>
+                        </div>
+                </fieldset>
                     
                 <!--IDIOMAS-->
-                <h3>Idioma</h3>
-                    <fieldset class="field_languages">
-                    <div id="languages">
-                        <label for="languages_0" placeholder="idiomas"> <input type="text" id="languages_0" name="languages[]" placeholder="Idioma"></label><br><br>
-                        <select id="fluency_0" name="fluency[]">
-                            <option value="Básico">Nível Básico</option>
-                            <option value="Básico a Intermediário">Nível Básico a Intermediário</option>
-                            <option value="Intermediário">Nível Intermediário</option>
-                            <option value="Avançado">Nível Avançado</option>
-                            <option value="Fluente ou Nativo">Nível Fluente ou Nativo</option>
-                        </select> <br><br>
+                <fieldset class="field_languages">
+                    <h3>Idioma</h3>
+                        <div id="languages">
+                            <div class="language_item">
+                                <label for="languages_0" placeholder="idiomas"> <input type="text" id="languages_0" name="languages[]" placeholder="Idioma"></label><br><br>
+                                <select id="fluency_0" name="fluency[]">
+                                    <option value="Básico">Nível Básico</option>
+                                    <option value="Básico a Intermediário">Nível Básico a Intermediário</option>
+                                    <option value="Intermediário">Nível Intermediário</option>
+                                    <option value="Avançado">Nível Avançado</option>
+                                    <option value="Fluente ou Nativo">Nível Fluente ou Nativo</option>
+                                </select> <br><br>
+                            </div>
+                        </div>
+                    <div class="_button_container">
+                        <button type="button" id="add" onclick="dup_languages()">Adicionar</button><br><br>
                     </div>
-                    <button type="button" onclick="dup_languages()">Adicionar</button><br><br>
+                </fieldset>
+            </div>   
 
-                    <input type="submit" value="Gerar Curriculo"> 
+            <input type="submit" value="Gerar Curriculo"> 
 
             </form>
         </article>
@@ -143,13 +169,16 @@
 
     <!--TODO: Prencher do footer-->
     <footer>
-        <p>©2024 TalentTail</p>
+    
         <!--TODO: Prencher da nav-->
-        <nav class="nav_footer">
+        <nav class="nav_footer"> 
+                <p>©2024 TalentTail</p>
+               
             <ul>
-                <li><img src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/welllington-henrique-silva-lima/">Wellington Henrique</a></li>
-                <li><img src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/glauber-shoity-nakai-529549273/">Glauber Shoity</a></li>
-                <li><img src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/kamilla-barros-silva-85537819a/">Kamilla Silva</a></li>
+                <div class="nav_footer_div"><p>Contato</p></div> 
+                <li><img class="linkedin_icon" src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/welllington-henrique-silva-lima/">Wellington Henrique</a></li>
+                <li><img class="linkedin_icon" src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/glauber-shoity-nakai-529549273/">Glauber Shoity</a></li>
+                <li><img class="linkedin_icon" src="IMG/linkedIn_icon.png" alt="LinkedIn Icon"><a href="https://www.linkedin.com/in/kamilla-barros-silva-85537819a/">Kamilla Silva</a></li>
             </ul>
         </nav>
     </footer>
