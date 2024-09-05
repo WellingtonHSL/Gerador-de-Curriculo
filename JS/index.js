@@ -283,8 +283,7 @@ phone_mask.addEventListener('keypress', phone_mask_ =>{
 
 })}
 
-})
-
+//CÁLCULO DE IDADE COM BASE NA DATA DE NASCIMENTO
 function calculateAge() {
     const birth = document.getElementById('dt_birth').value;
     const birthDate = new Date(birth);
