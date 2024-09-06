@@ -168,7 +168,7 @@ function remove_languages(count) {
 const form_section  = document.getElementById('form_section')
 const campos = document.querySelectorAll('.required')
 const spans  = document.querySelectorAll('.span_required')
-const phone_mask = document.querySelectorAll('.phone_number_0')
+const phone_mask = document.querySelector('.phone_number_0')
 
 function setError(dados_curriculo){
     campos[dados_curriculo].style.border = '2px solid red';
@@ -215,6 +215,15 @@ function sexValidate(){
         removeError(2);
     }
 }
+function sexValidate(){
+    if(campos[2].value.length <= 1){
+        setError(2);
+    }
+    else{
+        removeError(2);
+    }
+}
+
 
 //VALIDAÇAO DO ENDEREÇO
 function addressValidate(){
@@ -242,48 +251,36 @@ function stateValidate(){
         setError(5);
     }
     else{
-        removeError(6);
+        removeError(5);
     }
 }
 
 //VALIDAÇAO DO NUMERO DE TELEFONE
 function phone_numberValidate(){
-    if(campos[7].value.length <= 13){
-        setError(7);
-    }
+    if(campos[6].value.length <= 10){
+        setError(6);
+    }  
     else{
-        removeError(7);
+        removeError(6);
     }
 }
 
 //VALIDAÇAO DO EMAIL
 function emailValidate(){
-    if(campos[8].value.length <= 10){
-        setError(8);
+    if(campos[7].value.length <= 10){
+        setError(7);
     }
     else{
-        removeError(8);
+        removeError(7);
         console.log("EMAIL");
     }
 }
 
-//MASCARA DO TELEFONE
-//BUG: com a atualização das id para array e parou de funcionar
-function phone_mask_(){
-phone_mask.addEventListener('keypress', phone_mask_ =>{
-    let phone_masklength = phone_mask.value.length
-    console.log("ENTROUU");
-    if(phone_masklength === 0 ){
-        phone_mask.value += '(';
-    } else if(phone_masklength === 3){
-        phone_mask.value += ')';
-    }else if(phone_masklength === 9){
-        phone_mask.value += '-';
-    }
 
-})}
-
+ 
 //CÁLCULO DE IDADE COM BASE NA DATA DE NASCIMENTO
+
+
 function calculateAge() {
     const birth = document.getElementById('dt_birth').value;
     const birthDate = new Date(birth);
