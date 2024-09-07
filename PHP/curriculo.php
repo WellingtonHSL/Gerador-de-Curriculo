@@ -49,9 +49,9 @@
     <style>
 
         h1{
-            color:000000;
+            color:#595B5A;
             font-family:Arial, Helvetica, sans-serif;
-            font-size:40px;
+            font-size:50px;
             
         }
         h3{
@@ -74,8 +74,6 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
             font-weight: normal;
-            list-style:none;
-            
         }
         
         button{
@@ -90,13 +88,6 @@
             background-color:#bbffbb;
             cursor:pointer;
         }
-
-       .ledt_container,.right_container{
-        display: inline-block;
-        width: 49%; /* Ajuste a largura para caber ambas as divs */
-        vertical-align: top;
-
-       }
 
        .main_container{
         display:flex;
@@ -131,7 +122,6 @@
 </head>
 <body>
     <main>
-        <!-- <button id="back"><a href="dados_curriculo.html"><span>Voltar</span></a></button> -->
         <div class="main_container">
             <div class="container_left">
                 <section>
@@ -170,6 +160,7 @@
                     <p><?php echo htmlspecialchars($email); ?></p>
                     <p><?php echo htmlspecialchars($address); ?></p>
                     <p><?php echo htmlspecialchars($city); ?></p>
+                    <p><?php echo htmlspecialchars($state); ?></p>
                     <?php
                     if(is_array($phone_number)) {
                         foreach($phone_number as $phone) {
@@ -181,7 +172,7 @@
                     ?>
                     <p><?php echo htmlspecialchars($dt_birth); ?></p>
                     <p><?php echo htmlspecialchars($sexo); ?></p>
-                    <p><?php echo htmlspecialchars($age); ?></p>
+                    <p><?php echo htmlspecialchars($age) . " Anos"; ?></p>
                 </section>    
             </div>
             <div class="container_right">
